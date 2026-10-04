@@ -1,0 +1,16 @@
+/home/ubuntu/devops-projects/ecommerce/services/user-service/src/main/java/com/ecommerce/user/UserServiceApplication.java
+/home/ubuntu/devops-projects/ecommerce/services/user-service/src/main/java/com/ecommerce/user/config/SecurityConfig.java
+/home/ubuntu/devops-projects/ecommerce/services/user-service/src/main/java/com/ecommerce/user/controller/AddressController.java
+/home/ubuntu/devops-projects/ecommerce/services/user-service/src/main/java/com/ecommerce/user/controller/UserController.java
+/home/ubuntu/devops-projects/ecommerce/services/user-service/src/main/java/com/ecommerce/user/dto/ApiResponse.java
+/home/ubuntu/devops-projects/ecommerce/services/user-service/src/main/java/com/ecommerce/user/dto/UserDtos.java
+/home/ubuntu/devops-projects/ecommerce/services/user-service/src/main/java/com/ecommerce/user/entity/Address.java
+/home/ubuntu/devops-projects/ecommerce/services/user-service/src/main/java/com/ecommerce/user/entity/User.java
+/home/ubuntu/devops-projects/ecommerce/services/user-service/src/main/java/com/ecommerce/user/exception/ApiExceptions.java
+/home/ubuntu/devops-projects/ecommerce/services/user-service/src/main/java/com/ecommerce/user/exception/GlobalExceptionHandler.java
+/home/ubuntu/devops-projects/ecommerce/services/user-service/src/main/java/com/ecommerce/user/repository/AddressRepository.java
+/home/ubuntu/devops-projects/ecommerce/services/user-service/src/main/java/com/ecommerce/user/repository/UserRepository.java
+/home/ubuntu/devops-projects/ecommerce/services/user-service/src/main/java/com/ecommerce/user/security/JwtAuthenticationFilter.java
+/home/ubuntu/devops-projects/ecommerce/services/user-service/src/main/java/com/ecommerce/user/security/JwtService.java
+/home/ubuntu/devops-projects/ecommerce/services/user-service/src/main/java/com/ecommerce/user/service/AddressService.java
+/home/ubuntu/devops-projects/ecommerce/services/user-service/src/main/java/com/ecommerce/user/service/UserService.java
