@@ -49,7 +49,10 @@
         <spring-framework.version>6.2.19</spring-framework.version>
 
         <!-- PostgreSQL JDBC security update -->
-        <postgresql.version>42.7.12</postgresql.version>
+	<postgresql.version>42.7.12</postgresql.version>
+
+	<!-- Apache Tomcat security update -->
+	<tomcat.version>10.1.60</tomcat.version>
 
     </properties>
 
