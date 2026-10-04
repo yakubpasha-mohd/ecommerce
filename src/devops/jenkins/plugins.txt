@@ -1,0 +1,11 @@
+configuration-as-code
+credentials-binding
+git
+github
+github-branch-source
+pipeline-model-definition
+workflow-aggregator
+junit
+ws-cleanup
+ansicolor
+plain-credentials
