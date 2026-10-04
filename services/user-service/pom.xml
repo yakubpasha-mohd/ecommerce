@@ -1,175 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+         xsi:schemaLocation="
+           http://maven.apache.org/POM/4.0.0
+           https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-  <modelVersion>4.0.0</modelVersion>
+    <modelVersion>4.0.0</modelVersion>
 
-  <!-- ============================================================
-       Spring Boot
-       ============================================================ -->
-  <parent>
-    <groupId>org.springframework.boot</groupId>
-    <artifactId>spring-boot-starter-parent</artifactId>
-    <version>3.5.14</version>
-    <relativePath/>
-  </parent>
-
-  <!-- ============================================================
-       Project
-       ============================================================ -->
-  <groupId>com.ecommerce</groupId>
-  <artifactId>user-service</artifactId>
-  <version>1.0.0</version>
-
-  <name>ecommerce-user-service</name>
-  <description>E-commerce User Service - Phase 3</description>
-
-  <!-- ============================================================
-       Version Management
-       ============================================================ -->
-  <properties>
-
-    <!-- Java -->
-    <java.version>21</java.version>
-
-    <!-- JWT -->
-    <jjwt.version>0.12.6</jjwt.version>
-
-    <!-- Security dependency overrides based on Trivy findings -->
-    <jackson.version>2.21.7</jackson.version>
-    <micrometer.version>1.15.12</micrometer.version>
-    <spring-data-bom.version>2025.0.12</spring-data-bom.version>
-    <spring-framework.version>6.2.19</spring-framework.version>
-
-    <!-- PostgreSQL JDBC -->
-    <postgresql.version>42.7.12</postgresql.version>
-
-  </properties>
-
-  <!-- ============================================================
-       Dependencies
-       ============================================================ -->
-  <dependencies>
-
-    <!-- Spring Web -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-
-    <!-- Spring Data JPA -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-data-jpa</artifactId>
-    </dependency>
-
-    <!-- Validation -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-validation</artifactId>
-    </dependency>
-
-    <!-- Spring Security -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-security</artifactId>
-    </dependency>
-
-    <!-- Actuator -->
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-actuator</artifactId>
-    </dependency>
-
-    <!-- Flyway -->
-    <dependency>
-      <groupId>org.flywaydb</groupId>
-      <artifactId>flyway-core</artifactId>
-    </dependency>
-
-    <dependency>
-      <groupId>org.flywaydb</groupId>
-      <artifactId>flyway-database-postgresql</artifactId>
-    </dependency>
-
-    <!-- PostgreSQL -->
-    <dependency>
-      <groupId>org.postgresql</groupId>
-      <artifactId>postgresql</artifactId>
-      <version>${postgresql.version}</version>
-      <scope>runtime</scope>
-    </dependency>
-
-    <!-- ==========================================================
-         JWT
-         ========================================================== -->
-
-    <dependency>
-      <groupId>io.jsonwebtoken</groupId>
-      <artifactId>jjwt-api</artifactId>
-      <version>${jjwt.version}</version>
-    </dependency>
-
-    <dependency>
-      <groupId>io.jsonwebtoken</groupId>
-      <artifactId>jjwt-impl</artifactId>
-      <version>${jjwt.version}</version>
-      <scope>runtime</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>io.jsonwebtoken</groupId>
-      <artifactId>jjwt-jackson</artifactId>
-      <version>${jjwt.version}</version>
-      <scope>runtime</scope>
-    </dependency>
-
-    <!-- OpenAPI / Swagger -->
-    <dependency>
-      <groupId>org.springdoc</groupId>
-      <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
-      <version>2.7.0</version>
-    </dependency>
-
-    <!-- Lombok -->
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-      <optional>true</optional>
-    </dependency>
-
-    <!-- ==========================================================
-         Test
-         ========================================================== -->
-
-    <dependency>
-      <groupId>org.springframework.boot</groupId>
-      <artifactId>spring-boot-starter-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework.security</groupId>
-      <artifactId>spring-security-test</artifactId>
-      <scope>test</scope>
-    </dependency>
-
-  </dependencies>
-
-  <!-- ============================================================
-       Build
-       ============================================================ -->
-  <build>
-
-    <plugins>
-
-      <plugin>
+    <!-- ============================================================
+         Spring Boot
+         ============================================================ -->
+    <parent>
         <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-maven-plugin</artifactId>
-      </plugin>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.5.14</version>
+        <relativePath/>
+    </parent>
 
-    </plugins>
+    <!-- ============================================================
+         Project
+         ============================================================ -->
+    <groupId>com.ecommerce</groupId>
+    <artifactId>user-service</artifactId>
+    <version>1.0.0</version>
 
-  </build>
+    <name>ecommerce-user-service</name>
+    <description>E-commerce User Service - Phase 3</description>
+
+    <!-- ============================================================
+         Version Management
+         ============================================================ -->
+    <properties>
+
+        <!-- Java -->
+        <java.version>21</java.version>
+
+        <!-- JWT -->
+        <jjwt.version>0.12.6</jjwt.version>
+
+        <!-- Micrometer security update -->
+        <micrometer.version>1.15.12</micrometer.version>
+
+        <!-- Spring Data security update -->
+        <spring-data-bom.version>2025.0.12</spring-data-bom.version>
+
+        <!-- Spring Framework security update -->
+        <spring-framework.version>6.2.19</spring-framework.version>
+
+        <!-- PostgreSQL JDBC security update -->
+        <postgresql.version>42.7.12</postgresql.version>
+
+    </properties>
+
+    <!-- ============================================================
+         Dependency Management
+         ============================================================ -->
+    <dependencyManagement>
+        <dependencies>
+
+            <!-- ======================================================
+                 Jackson BOM
+                 Explicitly manages Jackson dependency versions.
+                 Verified available in Maven Central: 2.21.7
+                 ====================================================== -->
+            <dependency>
+                <groupId>com.fasterxml.jackson</groupId>
+                <artifactId>jackson-bom</artifactId>
+                <version>2.21.7</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- ============================================================
+         Dependencies
+         ============================================================ -->
+    <dependencies>
+
+        <!-- ========================================================
+             Spring Web
+             ======================================================== -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- ========================================================
+             Spring Data JPA
+             ======================================================== -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+        </dependency>
+
+        <!-- ========================================================
+             Validation
+             ======================================================== -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <!-- ========================================================
+             Spring Security
+             ======================================================== -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
+        <!-- ========================================================
+             Actuator
+             ======================================================== -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+
+        <!-- ========================================================
+             Flyway
+             ======================================================== -->
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-database-postgresql</artifactId>
+        </dependency>
+
+        <!-- ========================================================
+             PostgreSQL
+             ======================================================== -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>${postgresql.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- ========================================================
+             JWT
+             ======================================================== -->
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-api</artifactId>
+            <version>${jjwt.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-impl</artifactId>
+            <version>${jjwt.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt-jackson</artifactId>
+            <version>${jjwt.version}</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <!-- ========================================================
+             OpenAPI / Swagger
+             ======================================================== -->
+        <dependency>
+            <groupId>org.springdoc</groupId>
+            <artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+            <version>2.7.0</version>
+        </dependency>
+
+        <!-- ========================================================
+             Lombok
+             ======================================================== -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!-- ========================================================
+             Testing
+             ======================================================== -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+
+    <!-- ============================================================
+         Build
+         ============================================================ -->
+    <build>
+
+        <plugins>
+
+            <!-- Spring Boot executable JAR -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+        </plugins>
+
+    </build>
 
 </project>
